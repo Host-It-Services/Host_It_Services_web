@@ -29,7 +29,9 @@ export const Services = () => {
                 <div className="text-3xl text-primary mr-3">{service.icon}</div>
                 <h3 className="text-xl font-semibold">{service.name}</h3>
               </div>
-              <p className="text-gray-600">Providing top-notch {service.name.toLowerCase()} solutions for your business needs.</p>
+              <p className="text-gray-600">
+                Providing top-notch {service.name.toLowerCase()} solutions for your business needs.
+              </p>
             </motion.div>
           ))}
         </div>

@@ -1,5 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState,useCallback } from 'react';
 import { motion } from 'framer-motion';
+
+// Using an environment variable for WhatsApp number
+// For Vite projects
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER;
+
 
 export const Contact = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,29 +12,24 @@ export const Contact = () => {
   const [chatHistory, setChatHistory] = useState([]);
   const [isWhatsAppPrompt, setIsWhatsAppPrompt] = useState(false);
 
-  const handleSendMessage = (msg) => {
-    setChatHistory((prevHistory) => [...prevHistory, { sender: 'client', message: msg }]);
-    handleClientResponse(msg);
+  const responses = {
+    'technical support': 'We offer expert Technical Support for any IT-related issues. Do you need assistance with a specific problem?',
+    'web hosting': 'We have fast and reliable Web Hosting packages designed for businesses of all sizes. Would you like to know more about our plans?',
+    'graphic design': 'Our Graphic Design services are tailored to make your brand stand out. Are you interested in a logo, brochure, or something else?',
+    'photography': 'We offer professional Photography services to capture your best moments. Do you have a specific project in mind?',
+    'web development': 'Our Web Development team can build responsive and dynamic websites. Do you have a project you want to discuss?',
+    'social media management': 'We can manage your Social Media profiles to boost your online presence. Would you like a consultation?',
+    'web hosting plans': 'Our Web Hosting Plans are flexible and come with 24/7 support. Which plan are you interested in?'
   };
 
-  const handleClientResponse = (msg) => {
+  const handleSendMessage = useCallback((msg) => {
+    setChatHistory((prevHistory) => [...prevHistory, { sender: 'client', message: msg }]);
+    handleClientResponse(msg);
+  }, []);
+
+  const handleClientResponse = useCallback((msg) => {
     const lowerMsg = msg.toLowerCase();
-
-    // Define some common services and responses
-    const responses = {
-      'technical support': 'We offer expert Technical Support for any IT-related issues. Do you need assistance with a specific problem?',
-      'web hosting': 'We have fast and reliable Web Hosting packages designed for businesses of all sizes. Would you like to know more about our plans?',
-      'graphic design': 'Our Graphic Design services are tailored to make your brand stand out. Are you interested in a logo, brochure, or something else?',
-      'photography': 'We offer professional Photography services to capture your best moments. Do you have a specific project in mind?',
-      'web development': 'Our Web Development team can build responsive and dynamic websites. Do you have a project you want to discuss?',
-      'social media management': 'We can manage your Social Media profiles to boost your online presence. Would you like a consultation?',
-      'web hosting plans': 'Our Web Hosting Plans are flexible and come with 24/7 support. Which plan are you interested in?'
-    };
-
-    // Check if the message matches any known services
-    const matchedResponse = Object.keys(responses).find((service) =>
-      lowerMsg.includes(service)
-    );
+    const matchedResponse = Object.keys(responses).find((service) => lowerMsg.includes(service));
 
     if (matchedResponse) {
       setChatHistory((prevHistory) => [
@@ -37,7 +37,6 @@ export const Contact = () => {
         { sender: 'bot', message: responses[matchedResponse] }
       ]);
     } else {
-      // If no matching service is found, prompt for WhatsApp
       setChatHistory((prevHistory) => [
         ...prevHistory,
         {
@@ -47,10 +46,10 @@ export const Contact = () => {
       ]);
       setIsWhatsAppPrompt(true);
     }
-  };
+  }, [responses]);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/YOUR_WHATSAPP_NUMBER', '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank');
   };
 
   const handleSubmit = (e) => {
@@ -62,7 +61,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-12 md:py-20 bg-gray-900 text-gray-200">
+    <section id="contact" className="py-12 md:py-20 bg-gradient-to-r bg-gradient-to-r from-blue-100 to-white  text-black">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Contact Us</h2>
         <div className="max-w-md mx-auto">

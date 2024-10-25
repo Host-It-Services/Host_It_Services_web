@@ -1,6 +1,7 @@
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export const About = () => {
   // Control animations based on inView
@@ -13,8 +14,6 @@ export const About = () => {
   useEffect(() => {
     if (inView) {
       controls.start('visible');
-    } else {
-      controls.start('hidden');
     }
   }, [controls, inView]);
 
@@ -26,29 +25,32 @@ export const About = () => {
           {/* Image Animation */}
           <motion.div
             className="md:w-1/2 mb-8 md:mb-0"
-            initial="hidden"
+            initial={null} // No initial hidden state to prevent shifting
             animate={controls}
             variants={{
               visible: { opacity: 1, x: 0 },
-              hidden: { opacity: 0, x: -100 },
+              hidden: { opacity: 0, x: -20 }, // Subtle shift to the left
             }}
             transition={{ duration: 0.5 }}
           >
-            <img
-              src="/website-hosting.jpg"
+            <LazyLoadImage
+              src="/website-hosting.webp" // Use WebP if possible
               alt="About Host IT"
               className="rounded-lg shadow-md"
+              loading="lazy" // Optional, LazyLoadImage handles this
+              width="600" // Adjust to your image dimensions
+              height="400" // Adjust to your image dimensions
             />
           </motion.div>
 
           {/* Text Animation */}
           <motion.div
             className="md:w-1/2 md:pl-8"
-            initial="hidden"
+            initial={null} // No initial hidden state to prevent shifting
             animate={controls}
             variants={{
               visible: { opacity: 1, x: 0 },
-              hidden: { opacity: 0, x: 100 },
+              hidden: { opacity: 0, x: 20 }, // Subtle shift to the right
             }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
