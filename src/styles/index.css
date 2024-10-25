@@ -1,0 +1,15 @@
+/* src/styles/index.css */
+
+/* Tailwind's base styles like resets and typography */
+@tailwind base;
+
+/* Tailwind's component styles */
+@tailwind components;
+
+/* Tailwind's utility classes */
+@tailwind utilities;
+
+/* Your custom styles (optional) */
+body {
+  font-family: 'Inter', sans-serif; /* Example of a custom font */
+}
