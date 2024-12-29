@@ -1,0 +1,128 @@
+{
+    "header": {
+        "logoAlt": "Logo de l'entreprise",
+        "toggleMenu": "Basculer le menu",
+        "services": "Services",
+        "about": "À propos",
+        "plans": "Forfaits",
+        "contact": "Contact",
+        "changeLanguage": "Changer de langue"
+    },
+    "hero": {
+        "title": "Services Host IT",
+        "subtitle": "Vous apportant une variété de services technologiques",
+        "cta": "Enregistrez votre domaine maintenant",
+        "gwh": "Obtenir un hébergement Web",
+        "ctaAriaLabel": "Contactez-nous pour un devis"
+    },
+    "about": {
+        "title": "À propos de nous",
+        "imageAlt": "À propos de Host IT",
+        "paragraph1": "Host-IT Services est plus qu'une simple entreprise d'hébergement web et de services informatiques, nous sommes votre partenaire dédié pour naviguer dans le paysage numérique. Avec une passion pour l'innovation et un engagement envers l'excellence, nous offrons des solutions sur mesure qui permettent aux entreprises de prospérer en ligne.",
+        "paragraph2": "Notre équipe expérimentée apporte expertise et support personnalisé à chaque projet, assurant une intégration transparente et des performances optimales. Faites-nous confiance pour être votre allié de confiance dans la réalisation de vos objectifs numériques.",
+        "paragraph3": "Bienvenue chez Host-IT Services, où le succès rencontre l'innovation."
+    },
+    "services": {
+        "title": "Nos Services",
+        "technicalSupport": "Support Technique",
+        "webHosting": "Hébergement Web",
+        "graphicDesign": "Design Graphique",
+        "photography": "Photographie",
+        "webDevelopment": "Développement Web",
+        "socialMediaManagement": "Gestion des Médias Sociaux",
+        "description": "Fournissant des solutions de {{service}} de premier ordre pour les besoins de votre entreprise."
+    },
+    "plans": {
+        "title": "Forfaits d'Hébergement Web",
+        "description": "Nous fournissons des forfaits d'hébergement web rapides conçus pour toutes les tailles d'entreprises avec un support 24/7.",
+        "perMonth": "/Mois",
+        "getQuote": "Obtenir un Devis",
+        "quoteFor": "Obtenir un Devis pour {{plan}}",
+        "whatsappMessage": "Bonjour, je m'appelle {{name}} et je suis intéressé(e) par le forfait {{plan}}. Mon email est {{email}}. Message : {{message}}",
+        "starter": {
+            "name": "Débutant",
+            "price": "R 99",
+            "features": [
+                "3 Go de stockage (SSD)",
+                "1 nom de domaine",
+                "10 comptes email",
+                "Bande passante illimitée",
+                "cPanel gratuit",
+                "Certificat SSL gratuit",
+                "Migration de site web gratuite"
+            ]
+        },
+        "basic": {
+            "name": "Basique",
+            "price": "R 149",
+            "features": [
+                "5 Go de stockage (SSD)",
+                "3 noms de domaine",
+                "25 comptes email",
+                "Bande passante illimitée",
+                "cPanel gratuit",
+                "Certificat SSL gratuit",
+                "Migration de site web gratuite"
+            ]
+        },
+        "pro": {
+            "name": "Pro",
+            "price": "R 190",
+            "features": [
+                "10 Go de stockage (SSD)",
+                "5 noms de domaine",
+                "100 comptes email",
+                "Bande passante illimitée",
+                "cPanel gratuit",
+                "Certificat SSL gratuit",
+                "Migration de site web gratuite"
+            ]
+        },
+        "form": {
+            "name": "Nom",
+            "email": "Email",
+            "message": "Message",
+            "sendMessage": "Envoyer le Message"
+        }
+    },
+    "whyChooseUs": {
+        "title": "Pourquoi Nous Choisir ?",
+        "qualityService": "Service de Qualité",
+        "affordablePrices": "Prix Abordables",
+        "customerSatisfaction": "Satisfaction Client",
+        "support": "Support Client 24/7"
+    },
+    "mission": {
+        "title": "Notre Mission",
+        "subtitle": "Votre Fournisseur de Services IT de Confiance",
+        "description": "Chez Host-IT Services, notre mission est simple mais ambitieuse : permettre aux entreprises de réussir dans le monde numérique grâce à des solutions d'hébergement web et IT robustes. Nous nous engageons à fournir des services personnalisés qui dépassent les attentes et favorisent des partenariats à long terme avec nos clients.",
+        "imageAlt": "Autonomiser les entreprises"
+    },
+    "footer": {
+        "companyName": "Host IT Services",
+        "description": "Élever votre présence numérique avec des solutions web fiables.",
+        "address": "2 Alwin Street Brooklyn, Le Cap",
+        "phone": "+27 78 554 3814",
+        "email": "info@hostitservices.com",
+        "followUs": "Suivez-nous",
+        "copyright": "© {{year}} Host IT Services. Tous droits réservés.",
+        "privacyPolicy": "Politique de Confidentialité",
+        "termsOfService": "Conditions d'Utilisation",
+        "contactUs": "Contactez-nous"
+    },
+    "clients": {
+        "title": "Nos clients"
+    },
+    "contact": {
+        "title": "Contactez-nous",
+        "subtitle": "Nous aimerions avoir de vos nouvelles !",
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message",
+        "sendMessage": "Envoyer le Message",
+        "sending": "Envoi en cours...",
+        "successMessage": "Message envoyé avec succès !",
+        "errorMessage": "Échec de l'envoi du message. Veuillez réessayer.",
+        "footer": "Nous vous répondrons dans les plus brefs délais !"
+    }
+}

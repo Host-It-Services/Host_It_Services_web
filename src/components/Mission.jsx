@@ -1,54 +1,57 @@
 import { motion } from 'framer-motion'; 
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 
 export const Mission = () => {
-  // Use the inView hook to trigger animations when the section is in view
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
-    triggerOnce: true, // Animation triggers only once
-    threshold: 0.2, // Trigger when 20% of the element is in view
+    triggerOnce: true,
+    threshold: 0.2,
   });
 
   return (
     <motion.section
-      ref={ref}
-      className="py-16 bg-gray-50"
-      initial={{ opacity: 0 }} // Remove y movement to prevent layout shifts
-      animate={inView ? { opacity: 1 } : {}} // Animate only opacity when in view
-      transition={{ duration: 0.6, ease: 'easeOut' }} // Animation settings
-    >
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center justify-center">
-          {/* Text Content with Animation */}
-          <motion.div
-            className="w-full lg:w-1/2 lg:pr-10 text-center lg:text-left"
-            initial={{ opacity: 0 }} // Remove x movement to prevent layout shifts
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-gray-800">Our Mission</h2>
-            <p className="text-base md:text-xl max-w-3xl mx-auto lg:mx-0 text-gray-600">
-              Your Trusted IT Service Provider
-            </p>
-            <p className="mt-4 text-sm md:text-lg max-w-4xl mx-auto lg:mx-0 text-gray-700">
-              At Host-IT Services, our mission is simple yet ambitious: to empower businesses with robust web hosting and IT solutions that propel their success in the digital world. We are committed to providing personalized services that exceed expectations and foster long-term partnerships with our clients.
-            </p>
-          </motion.div>
-
-          {/* Image Section with Animation */}
-          <motion.div
-            className="w-full lg:w-1/2 mt-8 lg:mt-0"
-            initial={{ opacity: 0 }} // Remove x movement to prevent layout shifts
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
-          >
-            <img
-              src="/cloud.webp" // Changed this line
-              alt="Empowering businesses"
-              className="mx-auto lg:mx-0 rounded-lg shadow-lg"
-            />
-          </motion.div>
-        </div>
+    ref={ref}
+    className="py-16 bg-gray-50"
+    initial={{ opacity: 0 }}
+    animate={inView ? { opacity: 1 } : {}}
+    transition={{ duration: 0.6, ease: 'easeOut' }}
+  >
+    <div className="container mx-auto px-6">
+      <div className="flex flex-col lg:flex-row items-center justify-center">
+        <motion.div
+          className="w-full lg:w-1/2 lg:pr-10 text-center lg:text-left"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-800">
+            {t('mission.title')}
+          </h2>
+          <p className="text-lg sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto lg:mx-0 ">
+            {t('mission.subtitle')}
+          </p>
+          <p className="mt-4 text-lg sm:text-lg md:text-base lg:text-lg max-w-4xl mx-auto lg:mx-0 ">
+            {t('mission.description')}
+          </p>
+        </motion.div>
+  
+        <motion.div
+          className="w-full lg:w-1/2 mt-8 lg:mt-0"
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
+        >
+          <img
+            src="/cloud.webp"
+            alt={t('mission.imageAlt')}
+            className="mx-auto lg:mx-0 rounded-lg shadow-lg"
+          />
+        </motion.div>
       </div>
-    </motion.section>
+    </div>
+  </motion.section>
+  
   );
 };
+

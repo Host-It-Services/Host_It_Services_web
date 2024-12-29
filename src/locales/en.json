@@ -1,0 +1,129 @@
+{
+  "header": {
+    "logoAlt": "Company Logo",
+    "toggleMenu": "Toggle Menu",
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "plans": "Plans",
+    "contact": "Contact",
+    "changeLanguage": "Change Language"
+  },
+  "hero": {
+    "title": "Host IT Services",
+    "subtitle": "Bringing you a variety of tech services",
+    "cta": "Register domain now",
+    "gwh": "Get web hosting",
+    "ctaAriaLabel": "Contact us for a quote"
+  },
+  "about": {
+    "title": "About Us",
+    "imageAlt": "About Host IT",
+    "paragraph1": "Host-IT Services is more than just a web hosting and IT Services company, we are your dedicated partner in navigating the digital landscape. With a passion for innovation and commitment to excellence, we deliver tailored solutions that empower businesses to thrive online.",
+    "paragraph2": "Our experienced team brings expertise and personalized support to every project, ensuring seamless integration and optimal performance. Trust us to be your trusted ally in achieving your digital goals.",
+    "paragraph3": "Welcome to Host-IT Services, where success meets innovation."
+  },
+  "services": {
+    "title": "Our Services",
+    "technicalSupport": "Technical Support",
+    "webHosting": "Web Hosting",
+    "graphicDesign": "Graphic Design",
+    "photography": "Photography",
+    "webDevelopment": "Web Development",
+    "socialMediaManagement": "Social Media Management",
+    "description": "Providing top-notch {{service}} solutions for your business needs."
+  },
+  "plans": {
+    "title": "Web Hosting Plans",
+    "description": "We provide fast web hosting packages designed for all sizes of businesses with 24/7 Support.",
+    "perMonth": "/Month",
+    "getQuote": "Get a Quote",
+    "quoteFor": "Get a Quote for {{plan}}",
+    "whatsappMessage": "Hello, my name is {{name}} and I am interested in the {{plan}} plan. My email is {{email}}. Message: {{message}}",
+    "starter": {
+      "name": "Starter",
+      "price": "R 99",
+      "features": [
+        "3GB Storage (SSD)",
+        "1 website domain",
+        "10 Email accounts",
+        "Unlimited bandwidth",
+        "Free cPanel",
+        "Free SSL Certificate",
+        "Free Website Migration"
+      ]
+    },
+    "basic": {
+      "name": "Basic",
+      "price": "R 149",
+      "features": [
+        "5GB Storage (SSD)",
+        "3 website domain",
+        "25 Email accounts",
+        "Unlimited bandwidth",
+        "Free cPanel",
+        "Free SSL Certificate",
+        "Free Website Migration"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "R 190",
+      "features": [
+        "10GB Storage (SSD)",
+        "5 website domain",
+        "100 Email accounts",
+        "Unlimited bandwidth",
+        "Free cPanel",
+        "Free SSL Certificate",
+        "Free Website Migration"
+      ]
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "sendMessage": "Send Message"
+    }
+  },
+  "whyChooseUs": {
+    "title": "Why Choose Us?",
+    "qualityService": "Quality Service",
+    "affordablePrices": "Affordable Prices",
+    "customerSatisfaction": "Customer Satisfaction",
+    "support": "24/7 Customer Support"
+  },
+  "mission": {
+    "title": "Our Mission",
+    "subtitle": "Your Trusted IT Service Provider",
+    "description": "At Host-IT Services, our mission is simple yet ambitious: to empower businesses with robust web hosting and IT solutions that propel their success in the digital world. We are committed to providing personalized services that exceed expectations and foster long-term partnerships with our clients.",
+    "imageAlt": "Empowering businesses"
+  },
+  "footer": {
+    "companyName": "Host IT Services",
+    "description": "Elevating your digital presence with reliable web solutions.",
+    "address": "2 Alwin Street Brooklyn, Capetown",
+    "phone": "+27 78 554 3814",
+    "email": "info@hostitservices.com",
+    "followUs": "Follow Us",
+    "copyright": "© {{year}} Host IT Services. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "contactUs": "Contact Us"
+  },
+  "clients": {
+    "title": "Our Clients"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "We'd love to hear from you!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully!",
+    "errorMessage": "Failed to send message. Please try again.",
+    "footer": "We'll get back to you as soon as possible!"
+  }
+}
